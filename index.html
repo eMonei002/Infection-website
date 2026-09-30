@@ -318,29 +318,100 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <!-- Form Section -->
   <section id="order-form">
-    <h2>Place Your Order Now</h2>
-    <form action="https://formspree.io/f/mayglklv" method="POST">
-      <label for="name">Name *</label>
-      <input type="text" name="name" id="name" required />
+  <h2>Place Your Order Now</h2>
 
-      <label for="phone">Phone Number *</label>
-      <input type="tel" name="phone" id="phone" required />
+  <form id="infection-order-form"
+        action="https://formspree.io/f/mayglklv"
+        method="POST">
 
-      <label for="phone2">Second Phone Number</label>
-      <input type="tel" name="phone2" id="phone2" />
+    <label for="name">Name *</label>
+    <input type="text" name="name" id="name" required />
 
-      <label for="address">Full Delivery Address *</label>
-      <textarea name="address" id="address" required></textarea>
+    <label for="phone">Phone Number *</label>
+    <input type="tel" name="phone" id="phone" required />
 
-      <label for="state">State *</label>
-      <input type="text" name="state" id="state" required />
-  <p>Select The No Of Bottle You are Getting*</p>
-  <label><input type="radio" name="quantity" value="1" required> Buy 1 Bottle – ₦20,000</label><br>
-  <label><input type="radio" name="quantity" value="2"> Buy 2 Bottles – ₦35,000</label><br>
-  <label><input type="radio" name="quantity" value="3"> Buy 3 Bottles– ₦50,000</label>
-      <button type="submit">Place Order Now</button>
-    </form>
-  </section>
+    <label for="phone2">Second Phone Number</label>
+    <input type="tel" name="phone2" id="phone2" />
+
+    <label for="address">Full Delivery Address *</label>
+    <textarea name="address" id="address" required></textarea>
+
+    <label for="state">State *</label>
+    <input type="text" name="state" id="state" required />
+
+    <p>Select The No Of Bottle You are Getting*</p>
+
+    <label>
+      <input type="radio" name="quantity" value="1" required>
+      Buy 1 Bottle – ₦20,000
+    </label>
+
+    <br>
+
+    <label>
+      <input type="radio" name="quantity" value="2">
+      Buy 2 Bottles – ₦35,000
+    </label>
+
+    <br>
+
+    <label>
+      <input type="radio" name="quantity" value="3">
+      Buy 3 Bottles – ₦50,000
+    </label>
+
+    <div id="order-form-error" style="
+      display:none;
+      margin-top:15px;
+      padding:12px;
+      border-radius:8px;
+      background:#ffe8e8;
+      color:#b42318;
+    ">
+      There was a problem submitting your order. Please check your details and try again.
+    </div>
+
+    <button type="submit" data-fs-submit-btn>
+      Place Order Now
+    </button>
+
+  </form>
+</section>
+
+<script>
+  window.formspree =
+    window.formspree ||
+    function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+
+  formspree('initForm', {
+    formElement: '#infection-order-form',
+    formId: 'mayglklv',
+
+    onSuccess: function () {
+      window.location.href = 'thankyou.html';
+    },
+
+    onError: function () {
+      const errorBox = document.getElementById('order-form-error');
+
+      if (errorBox) {
+        errorBox.style.display = 'block';
+      }
+    },
+
+    onFailure: function () {
+      const errorBox = document.getElementById('order-form-error');
+
+      if (errorBox) {
+        errorBox.style.display = 'block';
+      }
+    }
+  });
+</script>
+
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 <section class="comments-section">
   <h2>Comments</h2>
 
