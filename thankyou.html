@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Received | Infection Treatment Nigeria</title>
+
+    <meta name="description"
+          content="Thank you for your order. Your request has been received and our team will contact you shortly.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4faf7;
+            color: #18352b;
+            min-height: 100vh;
+        }
+
+        .thank-you-wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 16px;
+        }
+
+        .thank-you-card {
+            width: 100%;
+            max-width: 650px;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 45px 30px;
+            text-align: center;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .success-icon {
+            width: 85px;
+            height: 85px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            background: #e5f8ed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 42px;
+            color: #1b8a55;
+        }
+
+        .thank-you-card h1 {
+            font-size: 34px;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #123b2b;
+        }
+
+        .thank-you-card .intro {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #5d6d66;
+            max-width: 520px;
+            margin: 0 auto 30px;
+        }
+
+        .order-box {
+            background: #f5fbf7;
+            border: 1px solid #d9eee2;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .order-box h2 {
+            font-size: 19px;
+            margin-bottom: 15px;
+            color: #123b2b;
+        }
+
+        .order-box p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #5d6d66;
+            margin-bottom: 10px;
+        }
+
+        .steps {
+            display: grid;
+            gap: 12px;
+            margin: 20px 0 30px;
+            text-align: left;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 14px;
+            background: #fafdfb;
+            border-radius: 12px;
+        }
+
+        .step-number {
+            min-width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #1b8a55;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        .step-content strong {
+            display: block;
+            color: #18352b;
+            margin-bottom: 4px;
+        }
+
+        .step-content span {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #687871;
+        }
+
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 12px;
+            background: #25D366;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 12px;
+            transition: 0.2s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.92;
+        }
+
+        .home-btn {
+            display: block;
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 12px;
+            background: #18352b;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.2s ease;
+        }
+
+        .home-btn:hover {
+            transform: translateY(-2px);
+            background: #10271f;
+        }
+
+        .privacy-note {
+            margin-top: 25px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #7a8882;
+        }
+
+        .footer {
+            margin-top: 25px;
+            font-size: 12px;
+            color: #9aa59f;
+        }
+
+        @media (max-width: 600px) {
+
+            .thank-you-wrapper {
+                padding: 15px;
+            }
+
+            .thank-you-card {
+                padding: 35px 20px;
+                border-radius: 18px;
+            }
+
+            .thank-you-card h1 {
+                font-size: 28px;
+            }
+
+            .thank-you-card .intro {
+                font-size: 16px;
+            }
+
+            .success-icon {
+                width: 72px;
+                height: 72px;
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="thank-you-wrapper">
+
+    <div class="thank-you-card">
+
+        <!-- Success Icon -->
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <!-- Main Heading -->
+        <h1>Thank You for Your Order!</h1>
+
+        <p class="intro">
+            Your order request has been received successfully.
+            Our team will review your details and contact you shortly
+            to confirm your order and delivery information.
+        </p>
+
+
+        <!-- Order Information -->
+        <div class="order-box">
+
+            <h2>What Happens Next?</h2>
+
+            <div class="steps">
+
+                <div class="step">
+
+                    <div class="step-number">1</div>
+
+                    <div class="step-content">
+                        <strong>Order Confirmation</strong>
+                        <span>
+                            Our team will contact you using the phone number
+                            you provided to confirm your order.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">2</div>
+
+                    <div class="step-content">
+                        <strong>Delivery Details</strong>
+                        <span>
+                            We will confirm your delivery address and
+                            provide the relevant delivery information.
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">3</div>
+
+                    <div class="step-content">
+                        <strong>Order Processing</strong>
+                        <span>
+                            Once your details are confirmed, your order
+                            will proceed for processing.
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- WhatsApp -->
+        <a
+            href="https://wa.me/2348132762892?text=Hello%2C%20I%20just%20placed%20an%20order%20on%20your%20website.%20I%20would%20like%20to%20confirm%20my%20order."
+            class="whatsapp-btn"
+            target="_blank"
+            rel="noopener"
+        >
+            💬 Confirm My Order on WhatsApp
+        </a>
+
+
+        <!-- Back Home -->
+        <a href="index.html" class="home-btn">
+            ← Back to Website
+        </a>
+
+
+        <!-- Privacy -->
+        <p class="privacy-note">
+            Please keep your phone available after placing your order
+            so our team can reach you to confirm your details.
+        </p>
+
+
+        <div class="footer">
+            © 2026 Infection Treatment Nigeria. All rights reserved.
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
